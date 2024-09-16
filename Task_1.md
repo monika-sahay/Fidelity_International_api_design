@@ -50,6 +50,7 @@ https://api.fidelity.com/api/v1/security-risk-escalation
            - `fields`: Limit the fields returned in the response (e.g., title,riskLevel,status).
            - `page`: The page number for pagination.
            - `per_page`: The number of risks to return per page (for pagination).
+           - `q`: Search risks based on a keyword found in title or description.
        * Response 
            * 201 ok
        
