@@ -53,26 +53,33 @@ https://api.fidelity.com/api/v1/security-risk-escalation
        * Response 
            * 201 ok
        
-                    [
-                      {
-                        "riskId": "12345",
-                        "title": "Risk title",
-                        "riskLevel": "High",
-                        "status": "Open",
-                        "system": "Affected system",
-                        "identifiedBy": "John Doe",
-                        "dateIdentified": "2023-09-01"
-                      },
-                      {
-                        "riskId": "67890",
-                        "title": "Another risk",
-                        "riskLevel": "Medium",
-                        "status": "Open",
-                        "system": "Another system",
-                        "identifiedBy": "Jane Smith",
-                        "dateIdentified": "2023-08-20"
-                      }
-                    ]
+                    {
+                      "page": 1,
+                      "per_page": 20,
+                      "total": 100,
+                      "total_pages": 5,
+                      "risks": [
+                        {
+                          "riskId": "12345",
+                          "title": "Risk title",
+                          "riskLevel": "High",
+                          "status": "Open",
+                          "system": "Affected system",
+                          "identifiedBy": "John Doe",
+                          "dateIdentified": "2023-09-01"
+                        },
+                        {
+                          "riskId": "67890",
+                          "title": "Another risk",
+                          "riskLevel": "Medium",
+                          "status": "Open",
+                          "system": "Another system",
+                          "identifiedBy": "Jane Smith",
+                          "dateIdentified": "2023-08-20"
+                        }
+                      ]
+                    }
+
                 
         * 500 Internal Server Error:
             ```
