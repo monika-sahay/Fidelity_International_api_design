@@ -12,6 +12,35 @@ https://api.fidelity.com/api/v1/security-risk-escalation
 1. Create New Security Risk Assessment
      * Method: `POST`
      * Endpoint: `/api/V1/risks`
+     * Request Body: 
+     * Description: Specifies the data (usually in JSON format) that needs to be sent to the server in the request. This is used to provide information to the server when creating or updating a resource.
+       ```
+       {
+          "title": "Risk title",
+          "description": "Detailed risk description",
+          "riskLevel": "High | Medium | Low",
+          "identifiedBy": "John Doe",
+          "system": "Affected system or component",
+          "dateIdentified": "YYYY-MM-DD",
+          "status": "Open"
+        }
+       ```
+       * Response:
+            - 201 Created:
+              ```
+              {
+                  "message": "Security risk created successfully.",
+                  "riskId": "12345"
+              }
+
+              ```
+            - 400 Bad Request:
+              ```
+              {
+                  "error": "Invalid request data. Please check the fields and try again."
+              }
+              ```
+              
 2. Get All Security Risks
      * Method: `GET`
      * Endpoint: `/api/v1/risks`
